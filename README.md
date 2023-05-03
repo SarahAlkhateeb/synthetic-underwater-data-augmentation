@@ -27,7 +27,7 @@ During training, we generated images every $40k$ iteration. For the final model,
 ## References
 
 [1] [Differentiable Augmentation for Data-Efficient GAN Training](https://arxiv.org/pdf/2006.10738.pdf)
-<hr>
+***
 [2] [Progressive Growing of GANs for Improved Quality, Stability, and Variation](https://arxiv.org/pdf/1710.10196.pdf)
 <hr>
 [3] [Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf) 
