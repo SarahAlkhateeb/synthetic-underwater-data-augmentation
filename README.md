@@ -5,10 +5,10 @@
 ## Data Augmentation
 
 
-## Frame Tracking Data Augmentation
+### Frame Tracking Data Augmentation
 
 
-## Synthetic Data Augmentation
+### Synthetic Data Augmentation
 
 
 ## Object Detection
