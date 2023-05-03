@@ -12,9 +12,7 @@ All data and models are published at the Swedish National Data Service under the
 ### Synthetic Data Augmentation
 For StyleGAN2, we used the PyTorch implementation by [1]. StyleGAN2 can be trained to generate images of size $4\times4$ up to $1024\times1024$, where the sizes double each time. However, since our training images are of size $720\times576$, we trained the network to generate images of size $512\times512$, the highest possible resolution for us. 
 
-The model was trained with the implemented default hyper-parameters: 
-We used an Adam optimizer with momentum parameters ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20B_%7B1%7D%20%3D%200)
-, ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20B_%7B2%7D%20%3D%200.99)
+The model was trained with the implemented default hyper-parameters: We used an Adam optimizer with momentum parameters $\beta_1=0$, !$\beta_2=0.99$
 and learning rate $0.002$ for all weights, except for the mapping network, which used $100$ times lower learning rate. Furthermore, the implementation includes an equalized learning rate approach[^1](#fn1) [2].
 
 For the objective function, StyleGAN2 uses the improved loss from the original GAN paper [3] together with ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20R_1) regularization[^2](#fn1) [4] and regularization parameter ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cgamma%20%3D%2010). As activation function, leaky ReLU was used in both the discriminator and generator with a slope set to ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Calpha%3D0.2).
