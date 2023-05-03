@@ -29,7 +29,7 @@ For DiffAugment, we used the PyTorch implementation provided by the paper [1]. T
 
 ## References
 
-[1] [Differentiable Augmentation for Data-Efficient GAN Training](https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch)
+[1] [Differentiable Augmentation for Data-Efficient GAN Training-Github](https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch)
 
 [2] [Progressive Growing of GANs for Improved Quality, Stability, and Variation](https://arxiv.org/pdf/1710.10196.pdf)
 
