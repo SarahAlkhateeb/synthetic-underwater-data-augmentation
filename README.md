@@ -10,7 +10,7 @@ All data and models are published at the Swedish National Data Service under the
 
 
 ### Synthetic Data Augmentation
-For StyleGAN2, we used the PyTorch implementation by Zhao et al. [Differentiable Augmentation for Data-Efficient {GAN} Training](https://arxiv.org/pdf/2006.10738.pdf). StyleGAN2 can be trained to generate images of size 4x4 up to 1024x1024, where the sizes double each time. However, since our training images are of size 720x576, we trained the network to generate images of size 512x512, the highest possible resolution for us. 
+For StyleGAN2, we used the PyTorch implementation by Zhao et al. [Differentiable Augmentation for Data-Efficient GAN Training](https://arxiv.org/pdf/2006.10738.pdf). StyleGAN2 can be trained to generate images of size 4x4 up to 1024x1024, where the sizes double each time. However, since our training images are of size 720x576, we trained the network to generate images of size 512x512, the highest possible resolution for us. 
 
 The model was trained with the implemented default hyper-parameters: 
 We used an Adam optimizer with momentum parameters ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cbeta_%7B1%7D%20%3D%200)
