@@ -15,15 +15,15 @@ For StyleGAN2, we used the PyTorch implementation by [1]. StyleGAN2 can be train
 The model was trained with the implemented default hyper-parameters: We used an Adam optimizer with momentum parameters $\beta_1=0$, $\beta_2=0.99$
 and learning rate $0.002$ for all weights, except for the mapping network, which used $100$ times lower learning rate. Furthermore, the implementation includes an equalized learning rate approach[^1](#fn1) [2].
 
-For the objective function, StyleGAN2 uses the improved loss from the original GAN paper [3] together with ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20R_1) regularization[^2](#fn1) [4] and regularization parameter ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cgamma%20%3D%2010). As activation function, leaky ReLU was used in both the discriminator and generator with a slope set to ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Calpha%3D0.2).
+For the objective function, StyleGAN2 uses the improved loss from the original GAN paper [3] together with $R_1$ regularization[^2](#fn1) [4] and regularization parameter $\gamma = 10$. As activation function, leaky ReLU was used in both the discriminator and generator with a slope set to $\alpha=0.2$.
 
 We trained the network with a batch size of $8$ for a total of $500k$ image iterations (about $1222$ epochs). We chose this training length following the *Low-Shot Generation Experiment* [1] on the AnimalFace dataset [5] with similar size.
 During training, we generated images every $40k$ iteration. For the final model, we picked the weights for which the quality of generated images stopped improving. When generating images, the exponential moving average of the generator weights [2] with decay $0.999$ was used to reduce substantial weight variations between training iterations.
 
 ## Footnotes
-<a id="fn1"></a>[^1]: In the equalized learning rate approach, all weights are initialized from ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cmathcal%7BN%7D%20%5Csim%20%280%2C1%29) and scaled per-layer using a normalization constant during training. This approach is useful since the weights then have a similar scale during training, and hence, the learning speed is the same for all weights.
+<a id="fn1"></a>[^1]: In the equalized learning rate approach, all weights are initialized from $\mathcal{N} \sim (0,1)$ and scaled per-layer using a normalization constant during training. This approach is useful since the weights then have a similar scale during training, and hence, the learning speed is the same for all weights.
 
-<a id="fn1"></a>[^2]: ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20R_1) regularization stabilizes the training process by penalizing the discriminator for deviating from the optimum: ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20R_1%3D%5Cfrac%7B%5Cgamma%7D%7B2%7D%20%5Cmathbb%7BE%7D_%7Bx%5Csim%20%5Cmathbb%7BP%7D_r%7D%5B%5ClVert%5Cnabla%20D%28x%29%20%5CrVert%5E2%5D)
+<a id="fn1"></a>[^2]: $R_1$ regularization stabilizes the training process by penalizing the discriminator for deviating from the optimum: $R_1=\frac{\gamma}{2} \mathbb{E}_{x\sim \mathbb{P}_r}[\lVert\nabla D(x) \rVert^2]$}
 
 ## References
 
