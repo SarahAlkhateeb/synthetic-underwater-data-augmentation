@@ -23,7 +23,7 @@ During training, we generated images every $40k$ iteration. For the final model,
 ## Footnotes
 <a id="fn1"></a>[^1]: In the equalized learning rate approach, all weights are initialized from $\mathcal{N} \sim (0,1)$ and scaled per-layer using a normalization constant during training. This approach is useful since the weights then have a similar scale during training, and hence, the learning speed is the same for all weights.
 
-<a id="fn1"></a>[^2]: $R_1$ regularization stabilizes the training process by penalizing the discriminator for deviating from the optimum: $R_1=\frac{\gamma}{2} \mathbb{E}_{x\sim \mathbb{P}_r}[\lVert\nabla D(x) \rVert^2]$}
+<a id="fn1"></a>[^2]: $R_1$ regularization stabilizes the training process by penalizing the discriminator for deviating from the optimum: $R_1=\frac{\gamma}{2} \mathbb{E}_{x\sim \mathbb{P}_r}[\lVert\nabla D(x) \rVert^2]$
 
 ## References
 
