@@ -14,6 +14,7 @@ Follow the steps below to reproduce the synthetic data augmentation experiment u
 #### Step 1: Set up the environment
 
 Clone the PyTorch implementation of StyleGAN2 with DiffAugment from the GitHub repository [1]:
+
 ```git clone https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch```
 
 #### Step 2: Prepare the dataset
@@ -46,8 +47,8 @@ Use all three transformations as recommended by the authors when training with l
 
 #### Step 6: Evaluate the results
 Compare the generated images from the final model to the training dataset to evaluate the performance of the synthetic data augmentation experiment.
-References
 
+#### References
 [1] Differentiable Augmentation for Data-Efficient GAN Training-Github
 
 [2] Progressive Growing of GANs for Improved Quality, Stability, and Variation
