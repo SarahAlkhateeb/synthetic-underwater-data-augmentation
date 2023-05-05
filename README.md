@@ -41,12 +41,52 @@ Use the PyTorch implementation of DiffAugment provided by the paper [1]. Apply t
 
 Use all three transformations as recommended by the authors when training with limited data.
 
-#### References
-[1] [Differentiable Augmentation for Data-Efficient GAN Training-Github](https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch)
 
-[2] [Progressive Growing of GANs for Improved Quality, Stability, and Variation](https://arxiv.org/pdf/1710.10196.pdf)
 
 
 
 
 ## Object Detection
+
+#### Step 1: Prepare the datasets
+
+- Collect 3599 ($80%$) of the initial and frame-tracking generated images (total of 4499) for the YOLO+FrameTrack model.
+- Collect 2407 images ($90%$) of the initial and synthetically generated images (total of 2675) for the YOLO+Synthetic model.
+
+#### Step 2: Set up YOLOv4 environment
+Clone the YOLOv4 repository [3] and set up the environment as described in the official documentation.
+
+#### Step 3: Prepare pre-trained weights
+Download the pre-trained weights for the convolutional layers of the model trained on the MS COCO dataset.
+
+#### Step 4: Configure the models
+Use the default configurations for the models' training and set the width and height of the network to $512 \times 512$ pixels. 
+Resize every image to this size during both training and detection.
+
+#### Step 5: Apply data augmentation techniques
+Employ the following data augmentation techniques during training:
+
+- Random adjustments to saturation, hue, and exposure
+- Mosaic (combines 4 training images into one image)
+- Mixup (generates a new image by combining two random images)
+- Blur (randomly blurs the background $50%$ of the time)
+
+#### Step 6: Train the models
+Train the networks with the following settings:
+
+- Batch size: $64$
+- Total batch iterations: $6000$
+- Mini-batch size: $2$
+
+#### Step 7: Monitor training and select the final models
+After the burn-in period, calculate the mAP@0.5 for every $4^{th}$ epoch on the validation set. Use this metric, along with the loss, to determine when to stop training.
+
+#### References
+[1] [Differentiable Augmentation for Data-Efficient GAN Training-Github](https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch)
+
+[2] [Progressive Growing of GANs for Improved Quality, Stability, and Variation](https://arxiv.org/pdf/1710.10196.pdf)
+
+[3] [YOLOv4-Darknet](https://pjreddie.com/darknet/](https://github.com/AlexeyAB/darknet)
+
+
+
