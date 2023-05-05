@@ -45,9 +45,10 @@ Use all three transformations as recommended by the authors when training with l
 Compare the generated images from the final model to the training dataset to evaluate the performance of the synthetic data augmentation experiment.
 
 #### References
-[1] [Differentiable Augmentation for Data-Efficient GAN Training-Github](https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch)![image](https://user-images.githubusercontent.com/40351610/236449715-3c472983-bd43-44db-8a46-e07d17864424.png)
+[1] [Differentiable Augmentation for Data-Efficient GAN Training-Github]](https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch)
 
-[2] [Progressive Growing of GANs for Improved Quality, Stability, and Variation](https://arxiv.org/pdf/1710.10196.pdf)![image](https://user-images.githubusercontent.com/40351610/236449762-ce90598a-23f5-48ac-89db-103fc138bba4.png)
+[2] [Progressive Growing of GANs for Improved Quality, Stability, and Variation]https://arxiv.org/pdf/1710.10196.pdf)
+
 
 
 
