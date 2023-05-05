@@ -71,7 +71,7 @@ Employ the following data augmentation techniques during training:
 - Random adjustments to saturation, hue, and exposure
 - Mosaic (combines 4 training images into one image)
 - Mixup (generates a new image by combining two random images)
-- Blur (randomly blurs the background $50$ $%$ of the time)
+- Blur (randomly blurs the background $50$% of the time)
 
 #### Step 6: Train the models
 Train the networks with the following settings:
