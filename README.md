@@ -41,9 +41,6 @@ Use the PyTorch implementation of DiffAugment provided by the paper [1]. Apply t
 
 Use all three transformations as recommended by the authors when training with limited data.
 
-#### Step 5: Evaluate the results
-Compare the generated images from the final model to the training dataset to evaluate the performance of the synthetic data augmentation experiment.
-
 #### References
 [1] [Differentiable Augmentation for Data-Efficient GAN Training-Github](https://github.com/mit-han-lab/data-efficient-gans/tree/master/DiffAugment-stylegan2-pytorch)
 
