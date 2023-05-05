@@ -21,8 +21,8 @@ Clone the PyTorch implementation of StyleGAN2 with DiffAugment from the GitHub r
 Train the StyleGAN2 model with the following hyperparameters:
 
 - Image size: $512\times512$
-- Optimizer: Adam with momentum parameters $\beta_1=0$, $\beta_2=0.99$ and learning rate $0.002$
-- Mapping network learning rate: $100$ times lower than other weights
+- Optimizer: Adam with momentum parameters $\beta_1=0$, $\beta_2=0.99$
+- Learning rate $0.002$ except for the mapping network which which used $100$ times lower learning rate
 - Equalized learning rate approach: Enabled [2]
 - Objective function: Improved loss from the original GAN paper, $R_1$ regularization, and regularization parameter $\gamma = 10$
 - Activation function: Leaky ReLU with slope set to $\alpha=0.2$
