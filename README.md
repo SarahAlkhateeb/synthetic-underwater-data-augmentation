@@ -52,8 +52,8 @@ Use all three transformations as recommended by the authors when training with l
 
 #### Step 1: Prepare the datasets
 
-- Collect 3599 ($80\%$) of the initial and frame-tracking generated images (total of 4499) for the YOLO+FrameTrack model.
-- Collect 2407 images ($90\%$) of the initial and synthetically generated images (total of 2675) for the YOLO+Synthetic model.
+- Collect 3599 ($80$%) of the initial and frame-tracking generated images (total of 4499) for the YOLO+FrameTrack model.
+- Collect 2407 images ($90$%) of the initial and synthetically generated images (total of 2675) for the YOLO+Synthetic model.
 
 #### Step 2: Set up YOLOv4 environment
 Clone the YOLOv4 repository [3] and set up the environment as described in the official documentation.
@@ -71,7 +71,7 @@ Employ the following data augmentation techniques during training:
 - Random adjustments to saturation, hue, and exposure
 - Mosaic (combines 4 training images into one image)
 - Mixup (generates a new image by combining two random images)
-- Blur (randomly blurs the background $50/%$ of the time)
+- Blur (randomly blurs the background $50$% of the time)
 
 #### Step 6: Train the models
 Train the networks with the following settings:
